@@ -30,7 +30,7 @@ Ideale per gallerie d’arte RP, business in-game, eventi, collezionabili e cont
 
 # ox_inventory items
 
-['canvas_blank'] = {
+`['canvas_blank'] = {
     label = 'Tela Vuota',
     weight = 100,
     stack = true,
@@ -51,3 +51,4 @@ Ideale per gallerie d’arte RP, business in-game, eventi, collezionabili e cont
         export = 'bg_imagecanvas.useCustom'
     }
 },
+`
