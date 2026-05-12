@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Canvas Viewer</title>
+</head>
+<body>
+  <div id="image-container">
+    <img id="canvas-image" src="" alt="Canvas">
+    <button id="close-btn">Chiudi</button>
+  </div>
+
+  <script>
+    window.addEventListener('message', (event) => {
+      const data = event.data
+      if (data.action === 'showImage') {
+        document.getElementById('canvas-image').src = data.url
+        document.getElementById('image-container').style.display = 'flex'
+      }
+    })
+
+    document.getElementById('close-btn').addEventListener('click', () => {
+      document.getElementById('image-container').style.display = 'none'
+      fetch(`https://${GetParentResourceName()}/close`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: '{}'
+      })
+    })
+  </script>
+</body>
+</html>

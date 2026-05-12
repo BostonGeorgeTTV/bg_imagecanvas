@@ -1,0 +1,23 @@
+-- item per ox
+
+['canvas_blank'] = {
+    label = 'Tela Vuota',
+    weight = 100,
+    stack = true,
+    close = true,
+    description = 'Una tela bianca su cui potrai applicare un\'immagine.',
+    client = {
+        export = 'bg_imagecanvas.useBlank'
+    }
+},
+
+['canvas_custom'] = {
+    label = 'Tela Personalizzata',
+    weight = 100,
+    stack = false,
+    close = true,
+    description = 'Una tela con un\'immagine personalizzata.',
+    client = {
+        export = 'bg_imagecanvas.useCustom'
+    }
+},
